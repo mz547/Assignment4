@@ -1,27 +1,37 @@
 ---
-title: "Assignment4"
-author: "Ming Zhou"
+title: "PPOL670 - Assignment04"
+author: "Ming Zhou & Huixin Cai"
 format: html
-editor: visual
+editor: source
+editor_options: 
+  chunk_output_type: console
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+Data source: [https://cps.ipums.org/cps/](https://cps.ipums.org/cps/)
 
 ```{r}
-1 + 1
+library(ipumsr) 
+library(srvyr)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+
+ddi <- read_ipums_ddi("cps_00002.xml")
+data <- read_ipums_micro(ddi)
 ```
-
-You can add options to executable code like this
-
+# Graph 1: Scatterplot income by state 
 ```{r}
-#| echo: false
-2 * 2
-```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+```
+# Graph 2: employment satuts by race - bar
+```{r}
+
+```
+# Graph 3:  Relationship e and i by gender -line 
+```{r}
+
+```
+# Graph 4：virginia house income map
+```{r}
+
+```
